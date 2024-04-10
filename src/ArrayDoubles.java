@@ -36,9 +36,16 @@ public class ArrayDoubles extends VectorNombres{
      */
     @Override
     public void ordena() {
-        ;
+        for(int i=0; i<dades.length; i++){
+            int mesPetit=i;
+            for(int j=1+i; j<dades.length; j++){
+                if(dades[mesPetit]>dades[j]){
+                    mesPetit = j;
+                }
+            }
+            dedes[i]=dades[mesPetit];
+        }
     }
-
     /** 
      *  Inverteix l'ordre del vector
      */
